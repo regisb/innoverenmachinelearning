@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="description" content="Conf@42 - 42AI, 14 novembre 2017">
+        <meta name="author" content="Régis Behmo">
+        <meta name="apple-mobile-web-app-capable" content="yes" />
+        <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
+
+        <title>Innover en machine learning : Une approche pas à pas pour conserver sa santé mentale | Human Talks Paris, 12 mars 2019</title>
+        <link rel="stylesheet" href="static/css/reveal.css">
+        <link rel="stylesheet" href="static/css/theme/night.css">
+        <link rel="stylesheet" href="static/css/font-awesome.min.css">
+        <link rel="stylesheet" href="static/css/highlightjs/monokai.css">
+
+        <!-- Printing and PDF exports -->
+        <script>
+            var link = document.createElement( 'link' );
+            link.rel = 'stylesheet';
+            link.type = 'text/css';
+            link.href = window.location.search.match( /print-pdf/gi ) ? 'static/css/print/pdf.css' : 'static/css/print/paper.css';
+            document.getElementsByTagName( 'head' )[0].appendChild( link );
+        </script>
+
+        <style>
+            .orange, h1.orange, h2.orange, h3.orange {
+                color: #e7ad52;
+            }
+            .reveal table th, .reveal table td {
+                text-align: center;
+            }
+            .reveal table th:not(:last-child), .reveal table td:not(:last-child) {
+                border-right: 1px solid white
+            }
+            .reveal .green {
+                color: #17ff2e;
+            }
+            .discrete {
+                opacity: 0.2;
+            }
+            .not-discrete {
+                opacity: 1;
+            }
+            .reveal .stupid {
+                font-family: Comic Sans MS;
+                font-weight: bold;
+            }
+            .fragment.zerospace:not(.current-fragment) {
+                position: absolute;
+                left: -10000px;
+            }
+            .reveal .small-text {
+                font-size: 80%;
+            }
+        </style>
+    </head>
+
+    <body>
+        <div class="reveal">
+            <div class="slides">
+                <!--<section data-background-image="static/img/hahaha.jpg">-->
+                <section>
+                    <h2>Innover en machine learning</h2>
+                    <h3>Une approche pas à pas pour conserver sa santé mentale</h3>
+                    <p><a href="https://minutebutterfly.com">Régis Behmo</a>
+                    <a href="https://github.com/regisb"><i class="fa fa-github"></i></a>
+                    <a href="https://twitter.com/regisb"><i class="fa fa-twitter"></i></a>
+                    <a href="https://stackoverflow.com/users/356528/r%c3%a9gis-b?tab=profile"><i class="fa fa-stack-overflow"></i></a>
+                    @regisb<br></p>
+                    <p>Human Talks Paris, 12 mars 2019</p>
+                    <p>Slides : <a href="https://regisb.github.io/innoverenmachinelearning">https://regisb.github.io/innoverenmachinelearning</a></p>
+                    <p><a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/"><img alt="Licence Creative Commons" style="border-width:0" src="https://i.creativecommons.org/l/by-sa/4.0/88x31.png" /></a></p>
+                </section>
+
+                <section>
+                    <h2>De quoi va-t-on parler ?</h2>
+                    <h3 class="fragment">Recherche</h3>
+                    <h3 class="fragment">Machine learning</h3>
+                    <h3 class="fragment">Santé mentale</h3>
+                </section>
+
+                <section>
+                    <h2>De quoi ne va-t-on <i>pas</i> parler ?</h2>
+                    <h3 class="fragment">Recherche</h3>
+                    <h3 class="fragment">Machine learning</h3>
+                    <h3 class="fragment">Santé mentale</h3>
+                </section>
+
+                <section></section>
+
+                <section>
+                    <h1>Machine Learning</h1>
+                    <h1>==</h1>
+                    <h1>Recherche</h1>
+                </section>
+                <section>
+                    <h1 class="rainbow">Machine Learning</h1>
+                    <h1 class="rainbow">==</h1>
+                    <h1 class="rainbow">Recherche</h1>
+                </section>
+                <section>
+                    <h2 class="rainbow">Recherche wtf ?</h2>
+                </section>
+                <section data-background="static/img/onedoesnotsimply.png" data-background-size="contain"></section>
+                <section>
+                    <h2>Faire de la recherche</h2>
+                    <h3 class="stupid fragment">Méthode #1</h3>
+                    <h3 class="rainbow fragment">Méthode #2</h3>
+                </section>
+
+                <section>
+                    <h2 class="stupid">Méthode #1</h2>
+                    <p class="fragment">(aka: "Méthode YOLO")</p>
+                    <ol>
+                        <li>Trouver un problème</li>
+                        <li>Proposer une solution</li>
+                        <li>Tester la solution</li>
+                        <li>Si ça ne marche pas, retourner en 2</li>
+                        <li>Publier/Mettre en prod \o/</li>
+                    </ol>
+                </section>
+                <section data-background-video="static/img/yolo.mp4" data-background-video-muted></section>
+                <section>
+                    <p style="font-size: 400%;">(╯°□°)╯︵ ┻━┻</p>
+                </section>
+
+                <section class="stupid">
+                    <p class="fragment">"Bah je comprends pas ça marchait bien sur mes données"</p>
+                    <p class="fragment">"C'EST LEEEEEEEEEEEEEEENT"</p>
+                    <p class="fragment">"Ça marche quand même moins bien que &lt;methode X&gt;"</p>
+                    <p class="fragment">"Elle est bien cette méthode mais elle existe déjà (en mieux)"</p>
+                </section>
+                <section>
+                    <p>43-46% des étudiants en thèse en ingénierie présentent les symptomes d'une dépression</p>
+                    <p><i>Graduate Student Happiness &amp; Well-Being Report, The Graduate Assembly, 2014</i></p>
+                </section>
+                <section>
+                    <h2 class="stupid">Méthode #1</h2>
+                    <p>(aka: "Méthode YOLO")</p>
+                    <ol>
+                        <li>Trouver un problème</li>
+                        <li>Proposer une solution</li>
+                        <li>Tester la solution</li>
+                        <li>Si ça ne marche pas, retourner en 2</li>
+                        <li>Publier/Mettre en prod \o/</li>
+                    </ol>
+                </section>
+
+                <section>
+                    <h2 class="rainbow">Méthode #2</h2>
+                    <ol>
+                        <li>Trouver un problème</li>
+                        <li>Créer un jeu de données adapté</li>
+                        <li>Choisir une métrique</li>
+                        <li>Tester les méthodes existantes sur ce jeu de données</li>
+                        <li>Créer une baseline</li>
+                        <li>Identifier les limites de la baseline</li>
+                        <li>Proposer une solution qui résout ces limites</li>
+                        <li>Tester la solution</li>
+                        <li>Si ça ne marche pas, retourner en 7</li>
+                        <li>Publier/Mettre en prod \o/</li>
+                    </ol>
+                </section>
+                <section>
+                    <h3>1. Trouver un problème</h3>
+                    <p class="fragment">Estimer la température qu'il fera demain</p>
+                    <p class="fragment">Calculer la probabilité qu'un séisme se produise</p>
+                    <p class="fragment">Occuper le maximum de temps de cerveau disponible</p>
+                    <p class="fragment">Afficher des publicités pour maximiser la frénésie d'achat</p>
+                </section>
+                <section>
+                    <h3>2. Créer un jeu de données adapté</h3>
+                    <p class="fragment">1-3 jours de travail</p>
+                    <p class="fragment">Programme quick'n dirty pour semi-automatiser</p>
+                    <p class="fragment">Reprise automatique</p>
+                    <p class="fragment">Visualisation du jeu de données</p>
+                </section>
+                <section>
+                    <h3>3. Choisir une métrique</h3>
+                    <p class="fragment">métrique == manière d'évaluer de manière quantitative la pertinence d'un algorithme</p>
+                    <p class="fragment">précision, rappel, distance L1, L2, aire sous la courbe ROC...</p>
+                </section>
+                <section>
+                    <h3>4. Tester les méthodes existantes sur ce jeu de données</h3>
+                </section>
+                <section>
+                    <h1>4. Tester les méthodes existantes sur ce jeu de données</h1>
+                </section>
+                <section>
+                    <h1 class="rainbow">4. Tester les méthodes existantes sur ce jeu de données</h1>
+                </section>
+                <section>
+                    <h3>4. Tester les méthodes existantes sur ce jeu de données</h3>
+                    <p class="fragment stupid">"Personne n'a jamais travaillé sur ce sujet"</p>
+                    <p class="fragment stupid">"Personne n'a jamais publié sur ce sujet"</p>
+                    <p class="fragment stupid">"J'ai pas le temps"</p>
+                </section>
+
+                <section>
+                    <h3>"... se tenir sur les épaules des géants."</h3>
+                </section>
+                <section data-background-image="static/img/newton.jpg">
+                    <h3><i>"If I have seen further it is by standing on the shoulders of Giants."</i>, Isaac Newton</h3>
+                </section>
+                <section data-background-image="static/img/girafes.jpg" data-background-size="contain">
+                    <h3><i>"If I have seen further it is by standing on the shoulders of Giants."</i>, Isaac Newton</h3>
+                </section>
+                <section>
+                    <h3>4. Tester les méthodes existantes sur ce jeu de données</h3>
+                    <h4 class="fragment">Il y a plein de gens qui font du machine learning</h4>
+                    <h4 class="fragment">Ils en font depuis très longtemps</h4>
+                    <h4 class="fragment">Ils sont très malins</h4>
+                    <h4 class="fragment">Ils ont <u>faim</u></h4>
+                </section>
+                <section>
+                    <h2 class="rainbow">Méthode #2</h2>
+                    <ol>
+                        <li>Trouver un problème</li>
+                        <li>Créer un jeu de données adapté</li>
+                        <li>Choisir une métrique</li>
+                        <li>Tester les méthodes existantes sur ce jeu de données</li>
+                        <li>Créer une baseline</li>
+                        <li>Identifier les limites de la baseline</li>
+                        <li>Proposer une solution qui résout ces limites</li>
+                        <li>Tester la solution</li>
+                        <li>Si ça ne marche pas, retourner en 7</li>
+                        <li>Publier/Mettre en prod \o/</li>
+                    </ol>
+                </section>
+                <section>
+                    <h3>5. Créer une baseline</h3>
+                    <h3>6. Identifier les limites de la baseline</h3>
+                    <h3>7. Proposer une solution qui résout ces limites</h3>
+                    <div class="fragment">
+                        <p>Solution puissante mais pas alambiquée</p>
+                        <p>Méthode connue et éprouvée</p>
+                        <p>Implémentation de référence</p>
+                    </div>
+                </section>
+                <section>
+                    <h3>8. Tester la solution</h3>
+                    <h3>9. Si ça ne marche pas, retourner en 7</h3>
+                </section>
+                <section>
+                    <h3>10. Publier/Mettre en prod \o/</h3>
+                </section>
+                <section></section>
+                <section>
+                    <h2 class="rainbow">Méthode #2</h2>
+                    <ol>
+                        <li>Trouver un problème</li>
+                        <li>Créer un jeu de données adapté</li>
+                        <li>Choisir une métrique</li>
+                        <li>Tester les méthodes existantes sur ce jeu de données</li>
+                        <li>Créer une baseline</li>
+                        <li>Identifier les limites de la baseline</li>
+                        <li>Proposer une solution qui résout ces limites</li>
+                        <li>Tester la solution</li>
+                        <li>Si ça ne marche pas, retourner en 7</li>
+                        <li>Publier/Mettre en prod \o/</li>
+                    </ol>
+                </section>
+
+                <section>
+                    <p><i class="fa fa-envelope"></i> regis@behmo.com</p>
+                    <p><i class="fa fa-slideshare"></i> Slides : <a href="https://regisb.github.io/innoverenmachinelearning">https://regisb.github.io/innoverenmachinelearning</a></p>
+                    <br>
+                    <p><i class="fa fa-book"></i> Liens :</p>
+                    <ul>
+                        <li>There’s an awful cost to getting a PhD that no one talks about, <a href="https://qz.com/547641/theres-an-awful-cost-to-getting-a-phd-that-no-one-talks-about/">Quartz 2015</a></li>
+                        <li>Graduate Student Happiness &amp; Well-Being Report, <a href="http://ga.berkeley.edu/wp-content/uploads/2015/04/wellbeingreport_2014.pdf">Berkeley Graduate Assembly, 2014<a></li>
+                    </ul>
+                </section>
+            </div>
+        </div>
+        <script src="static/js/head.min.js"></script>
+        <script src="static/js/reveal.js"></script>
+        <script src="static/js/jquery-3.2.1.min.js"></script>
+        <script src="static/js/highlight.min.js"></script>
+        <script>
+            Reveal.initialize({
+                controls: false,
+                history: true,
+                transition: 'fade',
+            });
+
+            // rainbowify stuff
+            var rainbowPos = 0;
+            $(".rainbow").each(function(index, elt) {
+                var colors = ["red", "orange", "yellow", "green", "blue", "magenta", "purple"];
+                var content = "";
+                var letters = elt.textContent.split("");
+                for(var i = 0; i < letters.length; i++) {
+                    var color = colors[rainbowPos % colors.length];
+                    //var color = colors[parseInt(Math.random() * colors.length)];
+                    content += "<span style=\"color: " + color + ";\">" + letters[i] + "<\/span>";
+                    rainbowPos += 1;
+                }
+                $(elt).html(content);
+            });
+        </script>
+        <script>hljs.initHighlightingOnLoad();</script>
+    </body>
+</html>
